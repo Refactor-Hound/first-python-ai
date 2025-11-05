@@ -11,7 +11,7 @@ client = genai.Client(api_key=api_key)
 
 def main():
   resp =client.models.generate_content(model="gemini-2.0-flash-001", contents="Why is Boot.dev such a great place to learn backend development? Use one paragraph maximum.")
-  return print(f"{resp.text}\n  Prompt tokens: {resp.usage_metadata.prompt_token_count}\n  Response tokens: {resp.usage_metadata.candidates_token_count}")
+  return print(f"{resp.text}\nPrompt tokens: {resp.usage_metadata.prompt_token_count}\nResponse tokens: {resp.usage_metadata.candidates_token_count}")
 
 
 if __name__ == "__main__":
