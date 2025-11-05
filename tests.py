@@ -1,31 +1,3 @@
-# import unittest
-# from functions.get_files_info import get_files_info
-
-
-# class TestSomething(unittest.TestCase):
-#     def all_test(self):
-#         result = get_files_info("calculator", ".")
-#         self.assertIn(" - main.py: file_size=719 bytes, is_dir=False
-# ", result)
-#         self.assertIn(" - tests.py: file_size=1331 bytes, is_dir=False
-# ", result)
-#         self.assertIn(" - pkg: file_size=44 bytes, is_dir=True
-# ", result)
-
-#     def test_error_case(self):
-#         result = some_function("bad_input")
-#         self.assertIn("Error:", result)
-
-#     def test_specific_subpath(self):
-#         result = some_function("base", "subdir")
-#         self.assertIn("subdir_name_or_file", result)
-#         self.assertIn("is_dir=", result)
-
-# if __name__ == "__main__":
-#     unittest.main()
-
-
-# python
 import unittest
 from functions.get_files_info import get_files_info
 
@@ -52,5 +24,33 @@ class TestGetFilesInfo(unittest.TestCase):
         result = get_files_info("calculator", "../")
         self.assertIn("Error:", result)
 
+    def demo():
+        print("Result for current directory:")
+        print(get_files_info("calculator", "."))
+        print("Result for 'pkg' directory:")
+        print(get_files_info("calculator", "pkg"))
+        print("Result for '/bin' directory:")
+        print(get_files_info("calculator", "/bin"))
+        print("Result for '../' directory:")
+        print(get_files_info("calculator", "../"))
+
 if __name__ == "__main__":
-    unittest.main()
+  unittest.main(), 
+
+
+
+# JUST TO PASS THE SPECIFIC COURSE REQUIREMENTS
+# from functions.get_files_info import get_files_info
+
+# def demo():
+#     print("Result for current directory:")
+#     print(get_files_info("calculator", "."))
+#     print("Result for 'pkg' directory:")
+#     print(get_files_info("calculator", "pkg"))
+#     print("Result for '/bin' directory:")
+#     print(get_files_info("calculator", "/bin"))
+#     print("Result for '../' directory:")
+#     print(get_files_info("calculator", "../"))
+
+# if __name__ == "__main__":
+#     demo()
