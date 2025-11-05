@@ -14,7 +14,7 @@ def get_files_info(working_directory, directory="."):
     try:
         entries = os.listdir(cand_abs)
         lines = []
-        for entry in sorted(entries:)
+        for entry in sorted(entries):
             full_path = os.path.join(cand_abs, entry)
             is_dir = os.path.isdir(full_path)
             size = os.path.getsize(full_path)
