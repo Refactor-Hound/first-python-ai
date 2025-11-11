@@ -43,9 +43,7 @@
 from functions.run_python_file import run_python_file
 
 def demo():
-    # print("Result for lorem:")
-    # print(get_file_content("calculator", "lorem.txt"))
-
+  
     # print("Result for main.py:")
     # print(get_file_content("calculator", "main.py"))
     # print("Result for 'pkg/calculator.py' directory:")
